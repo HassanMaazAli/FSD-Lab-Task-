@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meridian S1 – Build Your Watch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="scrollProgress"></div>
+
+    <header class="masthead">
+        <h1>Meridian S1</h1>
+        <p>Build a smartwatch that's yours. Pick a finish, add your name, drop it in the cart.</p>
+    </header>
+
+    <main class="configurator">
+
+        <section class="product-info">
+            <h2>Meridian S1 Smartwatch</h2>
+            <p class="price">$149</p>
+            <p id="description">
+                A slim smartwatch built for everyday use: heart-rate tracking, sleep insights and a week of battery life.
+            </p>
+            <button type="button" id="addBtn" class="primary">Add to cart</button>
+            <div id="popupMessage" role="status" aria-live="polite"></div>
+        </section>
+
+        <section class="product-preview">
+            <h2>Preview</h2>
+            <div id="product" draggable="true">
+                <img src="watch.png" alt="Meridian S1 smartwatch" id="productImage">
+                <div id="engraving">Your Name</div>
+            </div>
+            <p class="hint">Move your mouse over the watch to tilt it. Drag it into the cart.</p>
+        </section>
+
+        <section class="customization">
+            <h2>Customize</h2>
+
+            <label for="color">Finish</label>
+            <select id="color">
+                <option value="black">Black</option>
+                <option value="silver">Silver</option>
+                <option value="blue">Blue</option>
+            </select>
+
+            <label for="productName">Engraved name</label>
+            <input type="text" id="productName" maxlength="15" placeholder="Enter your name">
+            <p id="characterCount">0 / 15</p>
+        </section>
+
+        <section class="cart">
+            <h2>Cart</h2>
+            <div id="cartArea">Drop Product Here</div>
+            <p id="cartMessage"></p>
+        </section>
+
+        <form id="productForm">
+            <button type="submit" class="primary">Save configuration</button>
+            <button type="reset" class="ghost">Reset</button>
+        </form>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
